@@ -10,8 +10,8 @@ const apiArkhamCardList = async (req, res) => {
         .get('https://arkhamdb.com/api/public/cards')
         // .get('https://jsonplaceholder.typicode.com/todos/1')
         .then(response => {
-            console.log(new Date(), response)
             res.header("Access-Control-Allow-Origin", "*");
+            console.log()
             res.status(200).json(response.data);
         })
         .catch(error => {
